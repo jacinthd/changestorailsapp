@@ -9,11 +9,11 @@
 <body>
 	<div class="menu">
 		<ul>
-			<li class="active"><%= link_to('Home', {:controller => '/home', :action => 'index'})%></li>			 		
-			<li><a href="#">SERVICES</a></li>
-			<li><a href="#">NEWS/NEWSLETTER</a></li>
-			<li><a href="#">ABOUTUS</a></li>
-			<li><a href="#">CONTACTUS</a></li>
+			<li class=" <%= (@navbar != "home") ? "nil" : "active" %>"><%= link_to('Home', {:controller => '/home', :action => 'index'})%></li>			 		
+			<li class=" <%= (@navbar == "services") ? "active" : nil %>"><%= link_to('Services', {:controller => '/home', :action => 'services'})%></li>
+			<li class=" <%= (@navbar == "news") ? "active" : nil %>"><%= link_to('News', {:controller => '/home', :action => 'news'})%></li>
+			<li class=" <%= (@navbar == "aboutUs") ? "active" : nil %>"><%= link_to('About Us', {:controller => '/home', :action => 'aboutUs'})%></li>
+			<li class=" <%= (@navbar == "contactUs") ? "active" : nil %>"><%= link_to('Contact Us', {:controller => '/home', :action => 'contactUs'})%></li>
 			<div class="clearFloat"></div>
 		</ul>
 </div>

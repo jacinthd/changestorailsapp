@@ -33,15 +33,10 @@
    <div><%= f.label :address_line2 %><br />
   <%= f.text_field :address_line2 %></div>
 
-   <div><%= f.label :pincode %><br />
-  <%= f.text_field :pincode %></div>
+   <div><%= f.label :email %><br />
+  <%= f.text_field :email %></div>
 
-   <div><%= f.label :city %><br />
-  <%= f.text_field :city %></div>
 
-   <div><%= f.label :state %><br />
-  <%= f.text_field :state %></div>
-  
   <div><%= f.submit "Sign up" %></div>
 <% end %>
 
