@@ -6,14 +6,14 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body background ="/assets/images/body-bg.png">
 	<div class="menu">
 		<ul>
-			<li class=" <%= (@navbar != "Home") ? "nil" : "active" %>"><%= link_to('Home', {:controller => '/home', :action => 'index'})%></li>			 		
-			<li class=" <%= (@navbar == "Services") ? "active" : nil %>"><%= link_to('Home', {:controller => '/home', :action => 'services'})%></li>
-			<li class=" <%= (@navbar == "News") ? "active" : nil %>"><%= link_to('Home', {:controller => '/home', :action => 'news'})%></li>
-			<li class=" <%= (@navbar == "About Us") ? "active" : nil %>"><%= link_to('Home', {:controller => '/home', :action => 'aboutUs'})%></li>
-			<li class=" <%= (@navbar == "Contact Us") ? "active" : nil %>"><%= link_to('Home', {:controller => '/home', :action => 'contactUs'})%></li>
+			<li class=" <%= (@navbar != "home") ? "nil" : "active" %>"><%= link_to('Home', {:controller => '/home', :action => 'index'})%></li>			 		
+			<li class=" <%= (@navbar == "services") ? "active" : nil %>"><%= link_to('Services', {:controller => '/home', :action => 'services'})%></li>
+			<li class=" <%= (@navbar == "news") ? "active" : nil %>"><%= link_to('News', {:controller => '/home', :action => 'news'})%></li>
+			<li class=" <%= (@navbar == "aboutUs") ? "active" : nil %>"><%= link_to('About Us', {:controller => '/home', :action => 'aboutUs'})%></li>
+			<li class=" <%= (@navbar == "contactUs") ? "active" : nil %>"><%= link_to('Contact Us', {:controller => '/home', :action => 'contactUs'})%></li>
 			<div class="clearFloat"></div>
 		</ul>
 </div>
