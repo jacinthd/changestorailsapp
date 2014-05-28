@@ -6,7 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body background ="/assets/images/body-bg.png">
+<body background ="/assets/body-bg.png">
 	<div class="menu">
 		<ul>
 			<li class=" <%= (@navbar != "home") ? "nil" : "active" %>"><%= link_to('Home', {:controller => '/home', :action => 'index'})%></li>			 		
