@@ -7,40 +7,40 @@
 		<%= f.label (:first_name) %>  <t />
 		<%= f.text_field (:first_name), autofocus: true %>
 
-		<%= f.label :middle_name %>  <t />
-		<%= f.text_field :middle_name%>
+		<%= f.label (:middle_name) %>  <t />
+		<%= f.text_field (:middle_name)%>
 
-		<%= f.label :last_name %>  <t />
-		<%= f.text_field :last_name%> 
+		<%= f.label (:last_name) %>  <t />
+		<%= f.text_field (:last_name)%> 
   </div>
 
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+  <div><%= f.label (:email) %><br />
+  <%= f.email_field (:email) %></div>
 
-  <div><%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
+  <div><%= f.label (:password) %><br />
+    <%= f.password_field (:password), autocomplete: "off" %></div>
 
-  <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+  <div><%= f.label (:password_confirmation) %><br />
+    <%= f.password_field (:password_confirmation), autocomplete: "off" %></div>
     
-   <div><%= f.label :contact_number %><br />
-  <%= f.text_field :contact_number %></div>
+   <div><%= f.label (:contact_number) %><br />
+  <%= f.text_field (:contact_number) %></div>
    
-   <div><%= f.label :address_line1 %><br />
-  <%= f.text_field :address_line1 %></div>
+   <div><%= f.label (:address_line1) %><br />
+  <%= f.text_field (:address_line1) %></div>
 
-   <div><%= f.label :address_line2 %><br />
-  <%= f.text_field :address_line2 %></div>
+   <div><%= f.label (:address_line2) %><br />
+  <%= f.text_field (:address_line2) %></div>
 
-   <div><%= f.label :pincode %><br />
-  <%= f.text_field :pincode %></div>
+   <div><%= f.label (:pincode) %><br />
+  <%= f.text_field (:pincode) %></div>
 
-   <div><%= f.label :city %><br />
-  <%= f.text_field :city %></div>
+   <div><%= f.label (:city) %><br />
+  <%= f.text_field (:city) %></div>
 
-   <div><%= f.label :state %><br />
-  <%= f.text_field :state %></div>
+   <div><%= f.label (:state) %><br />
+  <%= f.text_field (:state) %></div>
   
   <div><%= f.submit "Sign up" %></div>
 <% end %>

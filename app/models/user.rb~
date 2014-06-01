@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   validates :pincode, :presence => 'true', :numericality => true, :length => {:minimum => 6, :maximum => 6}
   validates :city, :presence => 'true'
   validates :state, :presence => 'true'
-  validates :age, :numericality => true
+  #validates :age, :numericality => true
   
   
     
