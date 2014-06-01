@@ -33,7 +33,9 @@ class DeviseCreateUsers < ActiveRecord::Migration
       # new fields
       
       t.string :contact_number
-      t.string :name
+      t.string :first_name
+      t.string :middle_name
+      t.string :last_name
       t.string :address_line1
       t.string :address_line2
       t.string :pincode
