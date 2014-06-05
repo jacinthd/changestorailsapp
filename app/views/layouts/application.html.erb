@@ -1,38 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Devise</title>
+  <meta charset="utf-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenXchange</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel="apple-touch-icon-precomposed">
+  <link rel="apple-touch-icon-precomposed">
+  <link rel="apple-touch-icon-precomposed">
+  <link rel="apple-touch-icon-precomposed">
+  <link rel="shortcut icon">
 </head>
 <body >
-	<div class="menu">
-		<ul>
-			<li class=" <%= (@navbar != "home") ? "nil" : "active" %>"><%= link_to('Home', {:controller => '/home', :action => 'index'})%></li>			 		
-			<li class=" <%= (@navbar == "services") ? "active" : nil %>"><%= link_to('Services', {:controller => '/home', :action => 'services'})%></li>
-			<li class=" <%= (@navbar == "news") ? "active" : nil %>"><%= link_to('News', {:controller => '/home', :action => 'news'})%></li>
-			<li class=" <%= (@navbar == "aboutUs") ? "active" : nil %>"><%= link_to('About Us', {:controller => '/home', :action => 'aboutUs'})%></li>
-			<li class=" <%= (@navbar == "contactUs") ? "active" : nil %>"><%= link_to('Contact Us', {:controller => '/home', :action => 'contactUs'})%></li>
-			<div class="clearFloat"></div>
-		</ul>
-</div>
-	<div id="user_nav">
-		<% if user_signed_in? %> 
-			Signed in as <%= current_user.email %>. Not you? 
-			<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-		<% else %>
-			<%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %> 
-		<% end %>
-	</div>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+      	<div class="navbar-inner">
+	        <div class="container-fluid">
+	           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	            	<span class="icon-bar"></span>
+	            	<span class="icon-bar"></span>
+	            	<span class="icon-bar"></span>
+	            </button>
+	          	<a class="brand" href="#">GreenXchange</a>
+	          	<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class=" <%= (@navbar != "home") ? "nil" : "active" %>"><%= link_to('Home', {:controller => '/home', :action => 'index'})%></li>			 		
+						<li class=" <%= (@navbar == "services") ? "active" : nil %>"><%= link_to('Services', {:controller => '/home', :action => 'services'})%></li>
+						<li class=" <%= (@navbar == "news") ? "active" : nil %>"><%= link_to('News', {:controller => '/home', :action => 'news'})%></li>
+						<li class=" <%= (@navbar == "aboutUs") ? "active" : nil %>"><%= link_to('About Us', {:controller => '/home', :action => 'aboutUs'})%></li>
+						<li class=" <%= (@navbar == "contactUs") ? "active" : nil %>"><%= link_to('Contact Us', {:controller => '/home', :action => 'contactUs'})%></li>
+						<!--<div class="clearFloat"></div>-->
+						<li class="divider"></li>
+						<!--<div id="user_nav">-->
+						<li>
+						<% if user_signed_in? %> 
+							Signed in as <%= current_user.email %>. Not you?  <a href=""></a>
+							<button type="submit" class="btn"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></button> 
+								<!--don't know y d buttons don't redirect-->
+								<!--maybe changing button types might help?-->
+						<% else %>
+							<button type="submit" class="btn"><%= link_to "Sign up", new_user_registration_path %></button> 
+							<!--hav to add !- class="navbar-link" -! markup to the rails code redirecting to the sign up page, need to findout how to do it.-->
+							or
+							<button type="submit" class="btn"><%= link_to "sign in", new_user_session_path %></button>
+							<!--to get the buttons to align properly to the right i must do something like !- <p class="navbar-text pull-right"></p> and then i might have to write css for it, d'oh! -! -->
+							</div>
+						<% end %>
+						</li>
+					</ul>
+
+					
+
+					
+					
+			   	</div>
+			</div>
+		</div>
+	</nav>
+
+<div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header"><%= link_to('Services', {:controller => '/home', :action => 'services'})%></li>
+              <li class="nav-header">Auctions</li>
+              <li><a href="#">Pakka Sale</a></li>
+              <li><a href="#">Marzi Sale</a></li>
+              <li><a href="#">Link</a></li>
+              <li class="nav-header">Transportation</li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+        </div><!--/.well -->
+</div><!--/span-->
+
 
 	<% flash.each do |name, msg| %>
 		<%= content_tag :div, msg, :id => "flash_#{name}" %>
 	<% end %>
+	<!--what the heck is this flash thingy doing??-->
 <br/>
 <%= params.inspect %>
 
 <%= yield %>
+
 
 </body>
 </html>
