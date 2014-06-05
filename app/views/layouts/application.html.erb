@@ -17,11 +17,11 @@
 	<nav class="navbar navbar-inverse navbar-fixed-top">
       	<div class="navbar-inner">
 	        <div class="container-fluid">
-	           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	           <a type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 	            	<span class="icon-bar"></span>
 	            	<span class="icon-bar"></span>
 	            	<span class="icon-bar"></span>
-	            </button>
+	            </a>
 	          	<a class="brand" href="#">GreenXchange</a>
 	          	<div class="nav-collapse collapse">
 					<ul class="nav">
@@ -36,14 +36,14 @@
 						<li>
 						<% if user_signed_in? %> 
 							Signed in as <%= current_user.email %>. Not you?  <a href=""></a>
-							<button type="submit" class="btn"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></button> 
+							<span  class="btn"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></span> 
 								<!--don't know y d buttons don't redirect-->
 								<!--maybe changing button types might help?-->
 						<% else %>
-							<button type="submit" class="btn"><%= link_to "Sign up", new_user_registration_path %></button> 
+							<span  class="btn"><%= link_to "Sign up", new_user_registration_path %></span> 
 							<!--hav to add !- class="navbar-link" -! markup to the rails code redirecting to the sign up page, need to findout how to do it.-->
 							or
-							<button type="submit" class="btn"><%= link_to "sign in", new_user_session_path %></button>
+							<span  class="btn"><%= link_to "sign in", new_user_session_path %></span>
 							<!--to get the buttons to align properly to the right i must do something like !- <p class="navbar-text pull-right"></p> and then i might have to write css for it, d'oh! -! -->
 							</div>
 						<% end %>
@@ -60,7 +60,7 @@
 	</nav>
 
 <div class="span3">
-          <div class="well sidebar-nav">
+	          <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header"><%= link_to('Services', {:controller => '/home', :action => 'services'})%></li>
               <li class="nav-header">Auctions</li>
@@ -81,7 +81,7 @@
 	<% end %>
 	<!--what the heck is this flash thingy doing??-->
 <br/>
-<%= params.inspect %>
+<!--<%= params.inspect %> -->
 
 <%= yield %>
 
