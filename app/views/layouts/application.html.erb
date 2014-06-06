@@ -52,7 +52,7 @@
 				       		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
 			                <ul class="dropdown-menu">
 			                  <li class="nav-header">Auctions</li>
-			                    <li><a href="/Services/#PakkaSale">Pakka Sale</a></li>
+			                    <li> <%= link_to('Pakka Sale', {:controller => '/home', :action => 'services', :anchor => 'sometext'} )%> </li>
 			                    <li><a href="#">Marzi Sale</a></li>
 			                    <li><a href="#">Link</a></li>
 			                    <li class="divider"></li>
@@ -117,9 +117,9 @@
 	<!--what the heck is this flash thingy doing??-->
 <br/>
 <!--<%= params.inspect %> -->
-
+<div class="span9">
 <%= yield %>
-
+</div>
 
 </body>
 </html>
