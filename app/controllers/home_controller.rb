@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-	layout "abc"
+	#layout "abc"
 	def index
 		@navbar="home"
 		if user_signed_in?
