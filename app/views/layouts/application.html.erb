@@ -28,7 +28,10 @@
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
 </head>
 <body >
-	<nav class="navbar navbar-inverse navbar-fixed-top">
+
+
+
+	<div class="navbar navbar-inverse navbar-fixed-top">
       	<div class="navbar-inner">
 	        <div class="container-fluid">
 	           <a type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -41,20 +44,31 @@
 					<ul class="nav">
 						<li class=" <%= (@navbar != "home") ? "nil" : "active" %>"><%= link_to('Home', {:controller => '/home', :action => 'index'})%></li>			 		
 						<!--<li class=" <%= (@navbar == "services") ? "active" : nil %>"><%= link_to('Services', {:controller => '/home', :action => 'services'})%></li>-->
-						<li class=" <%= (@navbar == "services") ? "active" : nil %>">
-						                <span class="dropdown-toggle" data-toggle="dropdown"><%= link_to('Services', {:controller => '/home', :action => 'services'})%><b class="caret"></b></span>
-						                <ul class="dropdown-menu">
-						                  <li class="nav-header">Auctions</li>
-						                    <li><a href="#">Pakka Sale</a></li>
-						                    <li><a href="#">Marzi Sale</a></li>
-						                    <li><a href="#">Link</a></li>
-						                    <li class="divider"></li>
-						                  <li class="nav-header">Transportation</li>
-						                    <li><a href="#">Link</a></li>
-						                    <li><a href="#">Link</a></li>
-						                    <li><a href="#">Link</a></li>
-						                </ul>
-						</li>
+
+
+
+
+				        <li class="dropdown <%= (@navbar == "services") ? "active" : nil %>">
+				       		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
+			                <ul class="dropdown-menu">
+			                  <li class="nav-header">Auctions</li>
+			                    <li><a href="/Services/#PakkaSale">Pakka Sale</a></li>
+			                    <li><a href="#">Marzi Sale</a></li>
+			                    <li><a href="#">Link</a></li>
+			                    <li class="divider"></li>
+			                  <li class="nav-header">Transportation</li>
+			                    <li><a href="#">Link</a></li>
+			                    <li><a href="#">Link</a></li>
+			                    <li><a href="#">Link</a></li>
+			                </ul>
+				        </li>
+
+
+
+
+
+
+
 						<li class=" <%= (@navbar == "news") ? "active" : nil %>"><%= link_to('News', {:controller => '/home', :action => 'news'})%></li>
 						<li class=" <%= (@navbar == "aboutUs") ? "active" : nil %>"><%= link_to('About Us', {:controller => '/home', :action => 'aboutUs'})%></li>
 						<li class=" <%= (@navbar == "contactUs") ? "active" : nil %>"><%= link_to('Contact Us', {:controller => '/home', :action => 'contactUs'})%></li>
@@ -74,15 +88,11 @@
 						<% end %>
 						</li>
 					</ul>
-
-					
-
-					
 					
 			   	</div>
 			</div>
 		</div>
-	</nav>
+	</div>
 
 <div class="span3">
 	          <div class="well sidebar-nav">

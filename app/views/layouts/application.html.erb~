@@ -7,26 +7,69 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <link rel="apple-touch-icon-precomposed">
-  <link rel="apple-touch-icon-precomposed">
-  <link rel="apple-touch-icon-precomposed">
-  <link rel="apple-touch-icon-precomposed">
-  <link rel="shortcut icon">
+  <!-- For third-generation iPad with high-resolution Retina display: -->
+    <!-- Size should be 144 x 144 pixels -->
+    <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
+
+    <!-- For iPhone with high-resolution Retina display: -->
+    <!-- Size should be 114 x 114 pixels -->
+    <%= favicon_link_tag 'apple-touch-icon-114x114-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '114x114' %>
+
+    <!-- For first- and second-generation iPad: -->
+    <!-- Size should be 72 x 72 pixels -->
+    <%= favicon_link_tag 'apple-touch-icon-72x72-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '72x72' %>
+
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <!-- Size should be 57 x 57 pixels -->
+    <%= favicon_link_tag 'apple-touch-icon-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png' %>
+
+    <!-- For all other devices -->
+    <!-- Size should be 32 x 32 pixels -->
+    <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
 </head>
 <body >
-	<nav class="navbar navbar-inverse navbar-fixed-top">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="navbar navbar-inverse navbar-fixed-top">
       	<div class="navbar-inner">
 	        <div class="container-fluid">
-	           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	           <a type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 	            	<span class="icon-bar"></span>
 	            	<span class="icon-bar"></span>
 	            	<span class="icon-bar"></span>
-	            </button>
+	            </a>
 	          	<a class="brand" href="#">GreenXchange</a>
 	          	<div class="nav-collapse collapse">
 					<ul class="nav">
 						<li class=" <%= (@navbar != "home") ? "nil" : "active" %>"><%= link_to('Home', {:controller => '/home', :action => 'index'})%></li>			 		
-						<li class=" <%= (@navbar == "services") ? "active" : nil %>"><%= link_to('Services', {:controller => '/home', :action => 'services'})%></li>
+						<!--<li class=" <%= (@navbar == "services") ? "active" : nil %>"><%= link_to('Services', {:controller => '/home', :action => 'services'})%></li>-->
+						<li class=" <%= (@navbar == "services") ? "active" : nil %>">
+						                <span class="dropdown-toggle" data-toggle="dropdown"><%= link_to('Services', {:controller => '/home', :action => 'services'})%><b class="caret"></b></span>
+						                <ul class="dropdown-menu">
+						                  <li class="nav-header">Auctions</li>
+						                    <li><a href="#">Pakka Sale</a></li>
+						                    <li><a href="#">Marzi Sale</a></li>
+						                    <li><a href="#">Link</a></li>
+						                    <li class="divider"></li>
+						                  <li class="nav-header">Transportation</li>
+						                    <li><a href="#">Link</a></li>
+						                    <li><a href="#">Link</a></li>
+						                    <li><a href="#">Link</a></li>
+						                </ul>
+						</li>
 						<li class=" <%= (@navbar == "news") ? "active" : nil %>"><%= link_to('News', {:controller => '/home', :action => 'news'})%></li>
 						<li class=" <%= (@navbar == "aboutUs") ? "active" : nil %>"><%= link_to('About Us', {:controller => '/home', :action => 'aboutUs'})%></li>
 						<li class=" <%= (@navbar == "contactUs") ? "active" : nil %>"><%= link_to('Contact Us', {:controller => '/home', :action => 'contactUs'})%></li>
@@ -37,11 +80,8 @@
 						<% if user_signed_in? %> 
 							Signed in as <%= current_user.email %>. Not you?  <a href=""></a>
 							<span  class="btn"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></span> 
-								<!--don't know y d buttons don't redirect-->
-								<!--maybe changing button types might help?-->
 						<% else %>
 							<span  class="btn"><%= link_to "Sign up", new_user_registration_path %></span> 
-							<!--hav to add !- class="navbar-link" -! markup to the rails code redirecting to the sign up page, need to findout how to do it.-->
 							or
 							<span  class="btn"><%= link_to "sign in", new_user_session_path %></span>
 							<!--to get the buttons to align properly to the right i must do something like !- <p class="navbar-text pull-right"></p> and then i might have to write css for it, d'oh! -! -->
@@ -57,7 +97,7 @@
 			   	</div>
 			</div>
 		</div>
-	</nav>
+	</div>
 
 <div class="span3">
 	          <div class="well sidebar-nav">
