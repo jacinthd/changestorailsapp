@@ -13,6 +13,8 @@ class HomeController < ApplicationController
 
 	def news
 		@navbar= "news"
+		#pdf_filename = File.join(Rails.root, "GreexPage-3.pdf")
+		#send_file(pdf_filename, :filename => "GreexPage-3.pdf", :disposition => 'inline', :type => "application/pdf")
 	end
 
 	def aboutUs

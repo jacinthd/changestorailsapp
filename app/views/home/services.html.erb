@@ -1,3 +1,6 @@
+
+
+
 <h1>Services</h1>
 
 
@@ -9,13 +12,59 @@
 
 <!-- Tab panes -->
     <div class="tab-content">
-        <div class ="tab-pane active" id ="tab1">
-             <p>tab 1 content</p>
+        <div class ="tab-pane active" id ="tab1">     <!--find out a way to make the tabs spread out-->
+          <div class="drag">
+            <div class="circle1" style= "top:530px;">
+              <%=image_tag("greenCircle.jpeg", alt: "Image")%>
+            </div>
+          </div>
+          <div class="drag">
+            <div class="circle2">
+              <%=image_tag("greenCircle.jpeg", alt: "Image")%>
+            </div>
+          </div>
+              
+              <h4>Auctions</h4>
+              <!--<span class="text-muted">Something else</span>-->
+          
         </div>
         <div class ="tab-pane " id = "tab2">
              <p>tab 2 content</p>
         </div>
         <div class ="tab-pane " id = "tab3">
-             <p>tab 3 content</p>
+            <p>tab 3 content</p>
         </div>
     </div>
+
+
+
+<!--<div class="drag" style="left:60px;">&bull;</div>
+<div class="drag" style="left:170px;">&bull;</div>
+<div class="drag" style="left:280px;">&bull;</div>-->
+
+
+
+
+<script type="text/javascript">
+jQuery(function($){
+  $('.drag')
+    .drag('start',function( ev, dd ){
+      if ( !$.data( this, 'circle' ) )
+        $.data( this, 'circle', {
+          radius: 160,
+          centerX: dd.originalX + 160 + 30,
+          centerY: dd.originalY + 30
+        });
+    })
+    .drag(function( ev, dd ){
+      var data = $.data( this, 'circle' ),
+      angle = Math.atan2( ev.pageX - data.centerX, ev.pageY - data.centerY );
+      $( this ).css({
+        top: data.centerY + Math.cos( angle ) * data.radius - 30,
+        left: data.centerX + Math.sin( angle ) * data.radius - 30
+      });
+    }); 
+});
+</script>
+
+    

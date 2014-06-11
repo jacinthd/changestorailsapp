@@ -1,0 +1,36 @@
+/*.placeholder{
+	 height:75px; 		/*to control the size of images
+     width:75px;
+}*/
+
+
+.drag {
+	width: 100px;
+    height:100px;		/*max width and max height for fluid-responsive layout if using placeholder*/
+  	position: absolute;
+  	cursor: move;
+  	opacity: 0.9;
+  	text-align: center;
+
+  /*background: #BCE;
+  
+  top: 180px;
+  
+  
+  font: 24px/62px "Courier New", Courier, monospace;
+  filter: alpha(opacity=75);
+  -moz-opacity: 0.75;
+  */
+  }
+
+.circle1{
+	
+	
+}
+
+
+.circle2{
+	
+
+}
+
