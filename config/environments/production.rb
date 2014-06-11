@@ -39,7 +39,7 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
   
-  config.action_mailer.default_url_options = { host: 'lit-atoll-2020.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: ' arcane-retreat-4978.herokuapp.com' }
   
     config.action_mailer.raise_delivery_errors = true
 
@@ -48,8 +48,8 @@ Rails.application.configure do
   address:              'smtp.gmail.com',
   port:                 587,
   domain:               'example.com',
-  user_name:            'amit.c.raul@gmail.com',
-  password:             'barackobama28702316',
+  user_name:            'greenexchange3@gmail.com',
+  password:             'whatwhatjd'
   authentication:       'plain',
   enable_starttls_auto: true  }
 
@@ -73,7 +73,7 @@ Rails.application.configure do
 
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-  # config.assets.precompile += %w( search.js )
+   config.assets.precompile += %w( search.js )
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
