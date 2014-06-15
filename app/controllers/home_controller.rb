@@ -25,4 +25,12 @@ class HomeController < ApplicationController
 		@navbar= "contactUs"
 	end
 
+	def create
+		redirect_to(:action => 'tp')
+	end
+
+	def tp
+		render ('news')
+	end
+
 end

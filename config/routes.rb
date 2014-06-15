@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :products
+
   devise_for :users
   
   resources :dashboard
@@ -8,7 +10,6 @@ Rails.application.routes.draw do
   get 'news' => 'home#news'
   get 'aboutUs'  => 'home#aboutUs'
   get 'contactUs'  => 'home#contactUs'
-  
   match ':controller(/:action(/:id))', :via => :get
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
