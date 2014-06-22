@@ -79,20 +79,37 @@
 						<li class=" <%= (@navbar == "contactUs") ? "active" : nil %>"><%= link_to('Contact Us', {:controller => '/home', :action => 'contactUs'})%></li>
 						<!--<div class="clearFloat"></div>-->
 						<li class="divider"></li>
+						</ul>
 						<!--<div id="user_nav">-->
-						<li>
+						<ul class=" nav pull-right">
 						<% if user_signed_in? %> 
-							Signed in as <%= current_user.email %>. Not you?  <a href=""></a>
-							<span  class="btn"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></span> 
+							<p class="navbar-text pull-right">Signed in as <%= current_user.email %></p>
+							<li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li> 
 						<% else %>
-							<span  class="btn"><%= link_to "Sign up", new_user_registration_path %></span> 
-							or
-							<span  class="btn"><%= link_to "sign in", new_user_session_path %></span>
-							<!--to get the buttons to align properly to the right i must do something like !- <p class="navbar-text pull-right"></p> and then i might have to write css for it, d'oh! -! -->
+							<li ><%= link_to "Sign up", new_user_registration_path %></li> 
+				        	<li class="dropdown ">
+				       		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign In <b class="caret"></b></a>
+			                <ul class="dropdown-menu">
+			                	<form method="post" id="newUser" class="new_user navbar-form" action="/users/sign_in" accept-charset="UTF-8"><div style="display:none"><input type="hidden" value="✓" name="utf8"><input type="hidden" value="ED86t5UmisEUGYg1Xg/R9aTmbN9/SO9hOEuVwamafB4=" name="authenticity_token"></div>
+								  <div><label for="user_email">Email:</label>
+								  <input type="email" class="form-control input-medium" placeholder="Email"  name="user[email]" id="user_email" autofocus="autofocus"></div>
+
+								  <div><label for="user_password">Password:</label>
+								    <input type="password" class="form-control input-medium" placeholder="Password" name="user[password]" id="user_password" autocomplete="off"></div>
+
+								    <div><input type="hidden" value="0" name="user[remember_me]"><input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me"> <label for="user_remember_me">Remember me</label></div>
+
+								  <div>
+
+								  	<button class="btn btn-default" type="submit"  name="commit"> Sign in</button></div>
+								</form>
+
+			                </ul>
+				        </li>							<!--to get the buttons to align properly to the right i must do something like !- <p class="navbar-text pull-right"></p> and then i might have to write css for it, d'oh! -! -->
 							</div>
 						<% end %>
-						</li>
-					</ul>
+						</ul>
+					
 					
 			   	</div>
 			</div>
@@ -125,6 +142,84 @@
 <div class="span9">
 	<%= bootstrap_flash %>
 <%= yield %>
+</div>
+<div id ="bottom" class="navbar  navbar-fixed-bottom">
+	<div class="navbar-inner">
+		<marquee behavior="scroll" direction="left" onmouseout="this.start();" onmouseover="this.stop();" scrollamount="5">
+			<ol>
+				<li>
+					<ul>
+						<li> 11abc</li>
+						<li> 12abc</li>
+						<li> 13abc</li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li> 21abc</li>
+						<li> 22abc</li>
+						<li> 23abc</li>
+					</ul>
+				</li>			
+				<li>
+					<ul>
+						<li> 21abc</li>
+						<li> 22abc</li>
+						<li> 23abc</li>
+					</ul>
+				</li>			
+				<li>
+					<ul>
+						<li> 21abc</li>
+						<li> 22abc</li>
+						<li> 23abc</li>
+					</ul>
+				</li>			
+				<li>
+					<ul>
+						<li> 21abc</li>
+						<li> 22abc</li>
+						<li> 23abc</li>
+					</ul>
+				</li>			
+				<li>
+					<ul>
+						<li> 21abc</li>
+						<li> 22abc</li>
+						<li> 23abc</li>
+					</ul>
+				</li>			
+				<li>
+					<ul>
+						<li> 21abc</li>
+						<li> 22abc</li>
+						<li> 23abc</li>
+					</ul>
+				</li>			
+				<li>
+					<ul>
+						<li> 21abc</li>
+						<li> 22abc</li>
+						<li> 23abc</li>
+					</ul>
+				</li>			
+				<li>
+					<ul>
+						<li> 21abc</li>
+						<li> 22abc</li>
+						<li> 23abc</li>
+					</ul>
+				</li>			
+				<li>
+					<ul>
+						<li> 21abc</li>
+						<li> 22abc</li>
+						<li> 23abc</li>
+					</ul>
+				</li>			
+			</ol>
+		</marquee>
+	</div>
 </div>
 
 </body>

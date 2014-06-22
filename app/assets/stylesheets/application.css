@@ -16,5 +16,33 @@ body {
  	margin-top: 8em;	/*to bring the services side bar down below the heading*/
  }
 
+ .navbar-fixed-bottom .navbar-inner {
+ 	min-height: unset;
+ }
+ #bottom li{
+	display: inline-table;
+	min-width: 80px;
+}
+ #bottom ul li{
+	display: block;
+}
+#bottom ol{
+    margin: 0 0 0 10px;
 
+ }
+ #bottom ul{
+     border-right-color: black;
+    border-right-width: 5px;
+}
+
+ form label{
+	display: inline;
+	}
+#newUser label{
+	font-size: 12px;
+}
+
+#newUser{
+	padding: 10px;
+}
 
