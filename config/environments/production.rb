@@ -39,7 +39,7 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
   
-  config.action_mailer.default_url_options = { host: ' arcane-retreat-4978.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'arcane-retreat-4978.herokuapp.com' }
   
     config.action_mailer.raise_delivery_errors = true
 
