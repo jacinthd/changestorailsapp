@@ -18,7 +18,8 @@
 //= require jquery.event.drag.live-2.2.js
 //= require jquery.event.drop-2.2.js
 //= require jquery.event.drop.live-2.2.js 
-    var aboveHeight = $('header').outerHeight();
+//    var aboveHeight = $('header').outerHeight();
+	var aboveHeight= 200;
 	console.log(aboveHeight);
     $(window).scroll(function(){
 		
