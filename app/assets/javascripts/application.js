@@ -18,3 +18,16 @@
 //= require jquery.event.drag.live-2.2.js
 //= require jquery.event.drop-2.2.js
 //= require jquery.event.drop.live-2.2.js 
+    var aboveHeight = $('header').outerHeight();
+	console.log(aboveHeight);
+    $(window).scroll(function(){
+		
+        if ($(window).scrollTop() > aboveHeight){
+			
+//fixed class to the nav or sub nav
+			$('.top').addClass('navbar-fixed-top').next().css('padding-top','60px');
+        } else {
+		//  scroll up or less than aboveHeight remove the "fixed" class, and the padding-top
+            $('.top').removeClass('navbar-fixed-top').next().css('padding-top','0');
+        }
+    });
