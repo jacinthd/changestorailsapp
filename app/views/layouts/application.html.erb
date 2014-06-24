@@ -107,8 +107,8 @@
 								</form>
 
 			                </ul>
-				        </li>							<!--to get the buttons to align properly to the right i must do something like !- <p class="navbar-text pull-right"></p> and then i might have to write css for it, d'oh! -! -->
-							</div>
+				         </li>							
+						</div>
 						<% end %>
 						</ul>
 					
@@ -119,6 +119,7 @@
 	</div>
 
 <div class="span3">
+	<div class="services_sidebar">
 	          <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header"><%= link_to('Services', {:controller => '/home', :action => 'services'})%></li>
@@ -132,6 +133,7 @@
               <li><a href="#">Link</a></li>
             </ul>
         </div><!--/.well -->
+    </div>    
 </div><!--/span-->
 
 
@@ -152,18 +154,18 @@
 				<li>
 					<ul>
 						<li> 11abc</li>
-						<li> 12abc</li>
-						<li> 13abc</li>
+						<!--<li> 12abc</li>
+						<li> 13abc</li>-->
 					</ul>
 				</li>
 				<li>
 					<ul>
 						<li> 21abc</li>
-						<li> 22abc</li>
-						<li> 23abc</li>
+						<!--<li> 22abc</li>
+						<li> 23abc</li>-->
 					</ul>
 				</li>			
-				<li>
+				<!--<li>
 					<ul>
 						<li> 21abc</li>
 						<li> 22abc</li>
@@ -219,9 +221,34 @@
 						<li> 23abc</li>
 					</ul>
 				</li>			
-			</ol>
+			</ol>-->
 		</marquee>
 	</div>
+</div>
+
+<div id ="bottom" class="navbar  navbar-fixed-bottom">
+  <div class="second_fixed_bottom_bar"		
+	<div class="navbar-inner">
+		<marquee behavior="scroll" direction="left" onmouseout="this.start();" onmouseover="this.stop();" scrollamount="5">
+			<ol>
+				<li>
+					<ul>
+						<li> 31abc</li>
+						<!--<li> 12abc</li>
+						<li> 13abc</li>-->
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li> 41abc</li>
+						<!--<li> 22abc</li>
+						<li> 23abc</li>-->
+					</ul>
+				</li>			
+				
+		</marquee>
+	</div>
+  </div>	
 </div>
 
 </body>
