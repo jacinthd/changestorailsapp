@@ -1,14 +1,37 @@
-<div class="container-fluid">
-
 <div>
-	<h1> Welcome to GreenXchange </h1>
-</div>
 
+	<div>
+		<h1> Welcome to GreenXchange </h1>
+	</div>
+
+	
 
 	<div class="row">
-	        <div class="span5">
-	          <h2>Home Page Stuff</h2>
-	       	</div>
+	    <div class="span5">
+	        <h2> Home Page Stuff </h2>
+		    
+		    <p>	Agriculture in India has a significant history. Today, India ranks second worldwide in farm 
+		    	output. Agriculture and allied sectors like forestry and fisheries accounted for 16.6% of the GDP in 2009, about 50% of the total workforce.[1][2] The economic contribution of agriculture to India's GDP is steadily declining with the country's broad-based economic growth. Still, agriculture is demographically the broadest economic sector and plays a significant role in the overall socio-economic fabric of India.
+		    </p>
+		    <p>
+		        As Per the 2010 FAO world agriculture statistics, India is the world's largest producer of many fresh fruits and vegetables, milk, major spices, select fresh meats, select fibrous crops such as jute, several staples such as millets and castor oil seed. India is the second largest producer of wheat and rice, the world's major food staples.[3] India is also the world's second or third largest producer of several dry fruits, agriculture-based textile raw materials, roots and tuber crops, pulses, farmed fish, eggs, coconut, sugarcane and numerous vegetables. India ranked within the world's five largest producers of over 80% of agricultural produce items, including many cash crops such as coffee and cotton, in 2010.[3] India is also one of the world's five largest producers of livestock and poultry meat, with one of the fastest growth rates, as of 2011.[4]
+		    </p>
+		    
+		    <p>
+				Aquaculture and catch fishery is amongst the fastest growing industries in India. Between 1990 and 2010, Indian fish capture harvest doubled, while aquaculture harvest tripled. In 2008, India was the world's sixth largest producer of marine and freshwater capture fisheries, and the second largest aquaculture farmed fish producer. India exported 600,000 metric tonnes of fish products to nearly half of all the world's countries.[10][11][12]
+			</p>
+			<p>	
+				India has shown a steady average nationwide annual increase in the kilograms produced per hectare for various agricultural items, over the last 60 years. These gains have come mainly from India's green revolution, improving road and power generation infrastructure, knowledge of gains and reforms.[13] Despite these recent accomplishments, agriculture in India has the potential for major productivity and total output gains, because crop yields in India are still just 30% to 60% of the best sustainable crop yields achievable in the farms of developed as well as other developing countries.[14] Additionally, losses after harvest due to poor infrastructure and unorganised retail cause India to experience some of the highest food losses in the world.[15][16]
+			</p>
+
+			<div class="span5">
+		    	<div class="cabbage_farm">
+		    		<%=image_tag("cabbageFarm.jpg", alt: "Image")%>
+		    	</div>	
+		    </div>
+		    
+		</div> <!--/.span-->
+
 		<div class="span3">
 			<div class="external_links_bar">
 	        	<div class="well sidebar-nav">
@@ -17,11 +40,23 @@
 		              <li class="nav-header"><a href="http://www.iffcotokio.co.in/">Iffco-Tokio</a></li>
 		              <li class="nav-header"><a href="http://www.nafed-india.com/">NAFED</a></li>
 		            </ul>
-	        	</div><!--/.well -->
-	        </div>	
-		</div><!--/span-->
-    </div>
-</div>
+	        	</div>  <!--/.well -->
+	        </div>	  	<!--/.external-->	
+		</div>		  	<!--/span-->
+
+		<div class="span3">
+			<div class="farmer_image">
+				<%=image_tag("farmerImage.jpg", alt: "Image")%>
+			</div>	
+		</div>
+
+		<div class="span3">
+			<div class="farmer_image">
+				<%=image_tag("agri11.jpg", alt: "Image")%>
+			</div>	
+		</div>	
+    </div>				<!--/.row-->
+</div>					<!--./container-fluid-->
 
 <style>
 .external_links_bar{
@@ -29,4 +64,11 @@
 	border-style: solid;
 	border-color: rgb(100,200,75);
 }
+
+.farmer_image{
+	padding-top: 4em;
+}
+
+
+
 </style>

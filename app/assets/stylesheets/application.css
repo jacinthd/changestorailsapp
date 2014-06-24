@@ -7,10 +7,11 @@
 /*
  *= require bootstrap_and_overrides
  */
-.body {
+
+/*.body {
         padding-top: 60px;
         padding-bottom: 40px;
-      }
+      }*/
 
 .services_sidebar {				 
  	margin-top: 7em;	/*to bring the services side bar down below the heading*/
@@ -49,9 +50,19 @@
 }
 .banner{
 	width: 100%;
-	height: 200px;
+	height: 150px;
+}
+
+.first_fixed_bottom_bar{
+	height: 20px;
+	border-style: inset;
+	border-color: black;
+	margin-bottom:25px;
 }
 .second_fixed_bottom_bar{
-	border-color: rgb(0,255,0); /*how to make the border prominent*/
+	height: 20px;
+	border-style: inset;
+	border-color: black;
 }
+
 
