@@ -26,9 +26,11 @@
         if ($(window).scrollTop() > aboveHeight){
 			
 //fixed class to the nav or sub nav
-			$('.top').addClass('navbar-fixed-top').next().css('padding-top','60px');
+			$('.top').addClass('navbar-fixed-top');
+			document.getElementById('bdy').className = "bodySwitch";
         } else {
 		//  scroll up or less than aboveHeight remove the "fixed" class, and the padding-top
-            $('.top').removeClass('navbar-fixed-top').next().css('padding-top','0');
+            $('.top').removeClass('navbar-fixed-top');
+            document.getElementById("bdy").className = "";
         }
     });
