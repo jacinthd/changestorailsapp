@@ -64,15 +64,16 @@
 	border-style: inset;
 	border-color: #FF0066;
 }
-#botom_bar ol{
-	list-style: none;
-}
-#botom_bar ol li{
-	max-width: 60px;
-	float: left;
-}
 
 .image_for_bottom_bar{
 	height:25px;
 	width:25px;
+}
+
+#bottom_bar_1_text{
+	color:red;
+}
+
+#bottom_bar_2_text{
+	color:blue;
 }
