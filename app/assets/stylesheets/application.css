@@ -13,11 +13,7 @@
         padding-bottom: 40px;
       }*/
 
-.services_sidebar {				 
- 	margin-top: 7em;	/*to bring the services side bar down below the heading*/
- 	border-style: solid;
-	border-color: rgb(100,200,75);
- }
+
 
  .navbar-fixed-bottom .navbar-inner {
  	min-height: unset;

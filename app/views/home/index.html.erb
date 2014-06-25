@@ -33,41 +33,27 @@
 		</div> <!--/.span-->
 
 		<div class="span3">
-			<div class="external_links_bar">
-	        	<div class="well sidebar-nav">
-		            <ul class="nav nav-list">
-		              <li class="nav-header">External Links</li>
-		              <li class="nav-header"><a href="http://www.iffcotokio.co.in/">Iffco-Tokio</a></li>
-		              <li class="nav-header"><a href="http://www.nafed-india.com/">NAFED</a></li>
-		            </ul>
-	        	</div>  <!--/.well -->
-	        </div>	  	<!--/.external-->	
+        	<div class="well sidebar-nav external_links_bar">
+	            <ul class="nav nav-list">
+	              <li class="nav-header">External Links</li>
+	              <li class="nav-header"><a href="http://www.iffcotokio.co.in/">Iffco-Tokio</a></li>
+	              <li class="nav-header"><a href="http://www.nafed-india.com/">NAFED</a></li>
+	            </ul>
+        	</div>  <!--/.well -->  	<!--/.external-->	
 		</div>		  	<!--/span-->
 
 		<div class="span3">
-			<div class="farmer_image">
-				<%=image_tag("farmerImage.jpg", alt: "Image")%>
-			</div>	
+			<%=image_tag("farmerImage.jpg", alt: "Image", class:"farmer_image")%>
 		</div>
 
 		<div class="span3">
-			<div class="farmer_image">
-				<%=image_tag("agri11.jpg", alt: "Image")%>
-			</div>	
+			<%=image_tag("agri11.jpg", alt: "Image", class:"farmer_image")%>
 		</div>	
     </div>				<!--/.row-->
 </div>					<!--./container-fluid-->
 
 <style>
-.external_links_bar{
-	margin-top: 1em;	/*align the external links bar with services side bar*/
-	border-style: solid;
-	border-color: rgb(100,200,75);
-}
 
-.farmer_image{
-	padding-top: 4em;
-}
 
 
 
